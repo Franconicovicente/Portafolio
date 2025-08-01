@@ -43,9 +43,9 @@ body {
 .presentacion{
     display: flex;
     align-items: center;
-    padding: 7.1% 25%;
+    padding: 6.5% 15%;
     justify-content: space-between;
-    gap: 82px;
+    gap: 5px;
 }
 
 .presentacion__contenido{
@@ -93,12 +93,14 @@ body {
     gap: 0.625rem;
 }
 .presentacion__contenido__enlaces__link:hover{
-    background-color: var(--color-primario);
+    background-color: black
 }
 
 
 .presentacion__contenido__imagen{
+    align-self: flex-start;
     width: 50%;
+    padding: 0% 0% 28% 0% ;
 }
 
 .presentacion__contenido__enlaces__subtitulo{
@@ -118,20 +120,32 @@ body {
 }
 
 @media (max-width : 1200px){
-    .presentacion{
+    .presentacion {
         flex-direction: column-reverse;
         padding: 5%;
+        gap: 32px; /* te puede ayudar a no necesitar tanto margin-top en imagen */
     }
 
-    .presentacion__contenido{
-        width: auto;
+    .presentacion__contenido {
+        width: 100%;
     }
 
-    .header{
-        padding: 10%;
+    .presentacion__contenido__imagen {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
     }
 
-    .header__menu{
+    .presentacion__contenido__enlaces__link{
+        padding: 21.5px 40px;
+    }
+
+    .header {
+        padding: 10% 5%;
+    }
+
+    .header__menu {
         justify-content: center;
     }
 }
